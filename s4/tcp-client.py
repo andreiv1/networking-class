@@ -5,10 +5,10 @@ PORT = 3333
 BUFFER_SIZE = 8
 
 def get_command(command):
-    c = c.strip()
+    c = command.strip()
     content_length = len(c)
     total_length = len(str(content_length)) + 1 + content_length
-    return f'{total_length} {c}'
+    return f'{total_length} {c}'.encode('utf-8')
 
 
 def main():
